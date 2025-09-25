@@ -5,3 +5,10 @@ services:
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app:app
     plan: free
+    envVars:
+      - key: CLIENT_EMAIL
+        sync: false
+      - key: PRIVATE_KEY
+        sync: false
+      - key: TOKEN_URI
+        sync: false
